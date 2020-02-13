@@ -88,6 +88,9 @@ $(document).ready(function() {
   for (var i = 0; i < word.length; i++) {
     answer[i] = "_"
   }
+
+  lives = 5
+
   var remainingLetters = word.length
   $("button").on("click", function(e) {
     this.disabled = true
@@ -96,13 +99,23 @@ $(document).ready(function() {
       .html()
       .toLowerCase()
     console.log(value)
-    var showletter = answer
+
     for (var j = 0; j < word.length; j++) {
       if (word[j] === value) {
+        alert("correct")
         answer[j] = value
         document.querySelector("#answer").innerHTML = answer.join("")
         console.log(answer)
       }
+      if (word != value) {
+        alert("incorrect")
+        lives = lives - 1
+        console.log(lives)
+        break
+      }
+    }
+    if (lives < 0) {
+      prompt("you lose")
     }
   })
 })
