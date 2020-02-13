@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  text-align: center;
+  margin: 50px;
+}
+
+.gamebox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 48px;
+  align-items: center;
+}
+
+#underscores {
+  align-items: center;
+  margin-top: 50px;
+  letter-spacing: 80px;
+  left: 550px;
+}
+
+#answer {
+}
+
+#buttons {
+  margin-top: 50px;
+  border: 5px solid black;
+  padding: 20px;
+}
