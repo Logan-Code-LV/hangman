@@ -2,28 +2,39 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url(https://media1.thehungryjpeg.com/thumbs2/ori_3626271_o44w487l36ewjn7ciwgtuluvijdl5j1yy5dsmkj3_western-background-dessert-silhouettes-and-cowboys-on-horses-wildlife.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 515px;
+}
+
 .wrapper {
   text-align: center;
-  margin: 50px;
+  width: 1142px;
+  margin: 0 auto;
+}
+
+.gametitle {
+  font-size: 50px;
+  margin-top: 0px;
 }
 
 .gamebox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 48px;
-  align-items: center;
+  margin-left: 600px;
+  margin-top: 175px;
+  letter-spacing: 10px;
+  font-size: 70px;
 }
 
 #underscores {
-  align-items: center;
-  margin-top: 50px;
+  display: inline-block;
   letter-spacing: 80px;
-  left: 550px;
 }
 
 #buttons {
-  margin-top: 50px;
-  border: 5px solid black;
   padding: 20px;
+  width: 555px;
+  background-color: black;
+  margin: -20px 285px;
 }

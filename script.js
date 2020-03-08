@@ -85,6 +85,9 @@ $(document).ready(function() {
   console.log(word)
 
   var answer = []
+  var lives = 5
+  flag = true
+
   for (var i = 0; i < word.length; i++) {
     answer[i] = "_"
   }
@@ -98,11 +101,19 @@ $(document).ready(function() {
       .toLowerCase()
     console.log(value)
     for (var j = 0; j < word.length; j++) {
-      if (word[j] === value) {
-        answer[j] = value
-        document.querySelector("#answer").innerHTML = answer.join("")
-        console.log(answer)
-      }
+      setTimeout(() => {
+        if (word[j] === value && flag) {
+          answer[j] = value
+          document.querySelector("#answer").innerHTML = answer.join("")
+          flag === false
+        } else if (word[j] != value) {
+          alert("WRONG!")
+          lives = lives - 1
+        }
+        if (lives < 1) {
+          alert("YOU LOSE!")
+        }
+      }, 1000)
     }
   })
 })
